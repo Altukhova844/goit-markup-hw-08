@@ -4,8 +4,9 @@
 }
 
 .hero__overlay {
-  max-width: 1600px;
-  height: 600px;
+  width: $mobile;
+  height: 400px;
+
   margin-left: auto;
   margin-right: auto;
   background-size: contain;
@@ -17,22 +18,37 @@
       rgba(47, 48, 58, 0.4)
     ),
     url("../images/sq-hero.jpg");
+  object-fit: cover;
+
+  @media screen and (min-width: $tablet) {
+    width: 768px;
+    height: 400px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 1600px;
+    height: 600px;
+  }
 }
 
 .hero__content {
-  padding: 200px 0;
+  padding: 118px 0;
+
+  @media screen and (min-width: $desktop) {
+    padding: 200px 0;
+  }
 }
 
 .hero__title {
   margin-bottom: $card-set-gap;
   margin-left: auto;
   margin-right: auto;
-  width: 696px;
+  width: 360px;
 
   font-style: normal;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.6;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;

@@ -1,0 +1,27 @@
+.logo {
+  display: block;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+
+  &--accent {
+    color: $accent-color;
+  }
+}
+
+.logo--header {
+  padding: 25px 0;
+
+  color: $title-text-color;
+}
+
+.logo--footer {
+  margin-bottom: 20px;
+
+  color: $primary-white-color;
+}

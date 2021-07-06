@@ -1,0 +1,63 @@
+.hero {
+  padding: 200px, 0;
+  text-align: center;
+}
+
+.hero__overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: contain;
+
+  background: #c4c4c4;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/sq-hero.jpg");
+}
+
+.hero__content {
+  padding: 200px 0;
+}
+
+.hero__title {
+  margin-bottom: $card-set-gap;
+  margin-left: auto;
+  margin-right: auto;
+  width: 696px;
+
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: $primary-white-color;
+}
+
+.hero__btn {
+  padding: 10px 32px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+
+  background-color: $accent-color;
+  color: $primary-white-color;
+
+  transition-property: background-color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}

@@ -19,6 +19,14 @@
   border: none;
   background-color: transparent;
 
+  &:hover,
+  &:focus,
+  &:active {
+    color: $accent-color;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
+  }
+
   @media screen and (min-width: $tablet) {
     display: none;
   }
@@ -194,16 +202,6 @@
 
 .mobile-open,
 .mobile-close {
-  &:hover,
-  &:focus,
-  &:active {
-    color: $accent-color;
-    transition-duration: $transition-duration;
-    transition-timing-function: $transition-timing-function;
-  }
-}
-
-.mobile-open {
   position: absolute;
   right: 15px;
   top: 10px;
@@ -213,26 +211,16 @@
   background-color: transparent;
   cursor: pointer;
 
-  @media screen and (min-width: $tablet) {
-    display: none;
-    pointer-events: none;
-  }
-}
-
-.icon-menu-close {
-  position: absolute;
-  right: 15px;
-  top: 10px;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
   &:hover,
   &:focus {
     fill: $accent-color;
     transition-duration: $transition-duration;
     transition-timing-function: $transition-timing-function;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+    pointer-events: none;
   }
 }
 

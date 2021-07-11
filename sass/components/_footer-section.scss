@@ -1,7 +1,7 @@
 .footer {
   display: block;
   width: auto;
-  background-color: $dark-background-color;
+  background-color: $accent-darkbox-color;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -16,48 +16,43 @@
     justify-content: center;
     text-align: center;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     flex-wrap: nowrap;
     text-align: left;
   }
 }
 
-.footer__logo {
-  display: block;
-  margin-bottom: 20px;
-  color: $hero-text-color;
-  font-size: 24px;
-  line-height: 1.17;
-  @media screen and (min-width: 1200px) {
-    font-size: 26px;
-  }
-}
-
 .footer__address {
-  margin-bottom: 8px;
-  color: $hero-text-color;
-  line-height: 1.71;
   font-style: normal;
-  @media screen and (min-width: 1200px) {
+  line-height: 1.71;
+
+  margin-bottom: 8px;
+
+  color: $primary-white-color;
+
+  @media screen and (min-width: $desktop) {
     margin-bottom: 9px;
   }
 }
 
 .footer__nav-link {
-  color: $footer-text-color;
+  font-style: normal;
   line-height: 1.12;
   letter-spacing: 0.03em;
   text-decoration: none;
+
+  color: $primary-text-color;
+
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
 }
 
 .footer__contacts--item {
   &:not(:last-child) {
     margin-bottom: 8px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     &:not(:last-child) {
       margin-bottom: 9px;
     }
@@ -73,7 +68,7 @@
 .footer__nav-link {
   &:hover,
   &:focus,
-  &active {
+  &:active {
     color: $accent-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -97,12 +92,13 @@
 }
 
 .footer__title {
-  color: $hero-text-color;
+  color: $primary-white-color;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .footer__social-media {
@@ -117,8 +113,35 @@
   }
 }
 
-.footer__social-icon {
-  fill: $hero-text-color;
+.social-media__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  color: #afb1b8;
+  background: rgba(255, 255, 255, 0.1);
+
+  transition-property: background-color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.join-us__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+  fill: $primary-white-color;
 }
 
 .footer__subscription {
@@ -136,52 +159,73 @@
   }
 }
 
-.footer__form {
+.subscribe__list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  @media screen and (min-width: 1200px) {
+
+  @media screen and (min-width: $desktop) {
     flex-direction: row;
+    justify-content: center;
   }
 }
 
-.footer__label {
-  width: 100%;
-  @media screen and (min-width: 1200px) {
-    width: auto;
-  }
-}
-
-.footer__input {
-  padding-left: 12px;
-  height: 50px;
-  width: 100%;
-  background-color: transparent;
-  color: $hero-text-color;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-sizing: border-box;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  margin-bottom: 20px;
-  @media screen and (min-width: 768px) {
-    width: 450px;
-  }
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 0;
-    width: 358px;
-    margin-right: 12px;
-  }
-}
-
-.footer-button__block {
+.subscribe__input {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 0;
+
+  padding: 0 16px;
+
+  width: 358px;
+  height: 50px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  background-color: transparent;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
-.footer-button__text {
-  margin-right: 10px;
-  text-align: center;
+.subscribe__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  width: 200px;
+  height: 50px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: $primary-white-color;
+  background-color: $accent-color;
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 0;
+    margin-left: 12px;
+  }
+}
+
+.subscribe__icon {
+  margin-left: 10px;
+
+  fill: currentColor;
 }

@@ -12,6 +12,10 @@
     &__item:nth-child(3) {
       margin-right: 0;
     }
+
+    &__item:nth-last-child(-n + 2) {
+      margin-top: 15px;
+    }
   }
 
   @media screen and (min-width: $tablet) {

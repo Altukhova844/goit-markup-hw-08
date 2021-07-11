@@ -176,7 +176,7 @@
   top: 0;
   left: 0;
 
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   z-index: 5;
 
@@ -192,16 +192,8 @@
   }
 }
 
+.mobile-open,
 .mobile-close {
-  position: absolute;
-  right: 15px;
-  top: 10px;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-
   &:hover,
   &:focus,
   &:active {
@@ -228,6 +220,14 @@
 }
 
 .icon-menu-close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
   &:hover,
   &:focus {
     fill: $accent-color;

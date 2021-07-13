@@ -12,21 +12,19 @@
 .feature__item {
   display: block;
 
-  margin: 15px;
-
-  // width: 450px;
-  // height: 226px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 
   @media screen and (min-width: $tablet) {
+    margin: 15px;
     width: calc((100% - 2 * 30px) / 2);
-    // width: 354px;
-    // height: 251px;
   }
 
   @media screen and (min-width: $desktop) {
     width: calc((100% - 4 * 30px) / 4);
-    // width: 270px;
-    // height: 251px;
   }
 }
 

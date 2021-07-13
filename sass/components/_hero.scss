@@ -95,7 +95,12 @@
   screen and(min-resolution: 96dpi),
   screen and (min-resolution: 1dppx) {
   .hero__overlay {
-    background-image: url("../images/hero-mobile.png");
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 58, 57, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero-mobile.png");
   }
 }
 
@@ -103,7 +108,12 @@
   screen and(min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
   .hero__overlay {
-    background-image: url("../images/hero-mobile@2x.png");
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 58, 57, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero-mobile@2x.png");
   }
 }
 
@@ -112,14 +122,24 @@
     screen and(min-resolution: 96dpi),
     screen and (min-resolution: 1dppx) {
     .hero__overlay {
-      background-image: url("../images/hero-tablet.png");
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/hero-tablet.png");
     }
   }
   @media screen and (min-device-pixel-ratio: 2),
     screen and(min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     .hero__overlay {
-      background-image: url("../images/hero-tablet@2x.png");
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/hero-tablet@2x.png");
     }
   }
 }
